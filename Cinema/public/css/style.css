@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'Jua';
+    src: url("../font/Jua-Regular.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jua', sans-serif;
+}
+
+
+/* *************************************BODY***************************************** */
+header{
+    display: flex;
+    background-color: #8EBBED;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header nav{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li{
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: calc(0.5rem + 1.5vw);
+}
+
+.figure_user{
+    display: flex;
+    color: white;
+    margin-right: 2%;
+    align-items: center;
+    text-transform: uppercase;
+    width: 10%;
+    justify-content: end;
+    font-size: calc(0.5rem + 1vw);
+}
+
+.figure_user img{
+    margin-left: 5%;
+    width: 30%;
+    height: 30%;
+}
+
+.figure_dvd{
+    width: 5%;
+    margin-left: 2%;
+}
+
+.button_add{
+    display: flex;
+    width: 40%;
+}
+
+.button_add a{
+    display: flex;
+    width: 100%;
+    height: 35px;
+    color: white;
+    background-color: #A2A6EE;
+    margin-left: 1%;
+    border-radius: 8px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(0.5rem + 0.5vw);
+}
+
+#icons {
+    cursor: pointer;
+    display: none;
+}
+
+.button_add a:hover{
+    background-color: #B994E3;
+}
+
+nav ul li a:hover{
+    color: #B994E3;
+}
+
+/* *****************************************MEDIA******************************************* */
+@media (max-width: 650px){
+    #icons {
+        display: block;
+    }
+    #icons:before{
+        color: white;
+        content: "\2630";
+        font-size: calc(1rem + 3vw);
+    }
+    nav ul{
+        position: fixed;
+        left: -100%;
+        top: 7%;
+        flex-direction: column;
+        text-align: center;
+        background:  #8EBBED;
+        transition: 0.5s;
+        width: 100%;
+    }
+    nav li {
+        padding: 3px 0;
+    }
+
+    nav.active ul {
+        left: 0%;
+    }
+}
