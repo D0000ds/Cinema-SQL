@@ -12,24 +12,27 @@
 
 
 /* *************************************BODY***************************************** */
-header{
+body {
+    min-height: 100vh;
+    background-image: url(../img/layered-peaks-haikei.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
     display: flex;
+    height: 80px;
+    width: 100%;
     background-color: #8EBBED;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-}
-
-header nav{
-    width: 50%;
-    display: flex;
-    justify-content: center;
+    position: relative;
 }
 
 nav ul {
-    width: 80%;
     display: flex;
-    justify-content: space-between;
+    width: 80%;
+    justify-content: space-evenly;
 }
 
 nav ul li{
@@ -40,33 +43,38 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: calc(0.5rem + 1.5vw);
+    gap: 50px;
 }
 
 .figure_user{
     display: flex;
     color: white;
     margin-right: 2%;
-    align-items: center;
     text-transform: uppercase;
-    width: 10%;
-    justify-content: end;
+    width: 50%;
+    align-items: center;
     font-size: calc(0.5rem + 1vw);
+}
+
+.admin {
+    display: flex;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
 .figure_user img{
     margin-left: 5%;
-    width: 30%;
-    height: 30%;
+    width: 60px;
+    height: 60px;
 }
 
 .figure_dvd{
-    width: 5%;
     margin-left: 2%;
 }
 
 .button_add{
     display: flex;
-    width: 40%;
+    width: 60%;
 }
 
 .button_add a{
@@ -80,6 +88,7 @@ nav ul li a {
     text-decoration: none;
     align-items: center;
     justify-content: center;
+    text-align: center;
     font-size: calc(0.5rem + 0.5vw);
 }
 
@@ -96,8 +105,116 @@ nav ul li a:hover{
     color: #B994E3;
 }
 
+.mobile{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+/* *****************************************MAIN************************************************* */
+
+.homeCaroussel{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: -1;
+}
+
+.homeCaroussel img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    position: absolute;
+    top: 15%;
+    right: 0;
+    left: 0;
+}
+
+h1 {
+    font-size: calc(3rem + 4vw);
+    font-weight: normal;
+    text-shadow: 3px 4px 3px rgba(0, 0, 0, 0.42);
+}
+h2 {
+    font-size: calc(1rem + 2vw);
+    font-weight: normal;
+    text-shadow: 3px 4px 3px rgba(0, 0, 0, 0.42);
+}
+
+.boutonGauche {
+    display: flex;
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    background-color: #A2A6EE;
+    border: 0;
+    color: white;
+    width: 40px;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.boutonDroit {
+    display: flex;
+    position: absolute;
+    top: 20%;
+    right: 2%;
+    background-color: #A2A6EE;
+    border: 0;
+    color: white;
+    width: 40px;
+    height: 60px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    cursor: pointer;
+}
+
+.activeCaroussel {
+    transition: 100ms;
+}
+
+.lastest {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration-line: underline;
+    font-size: calc(0.5rem + 1.5vw);
+}
+
+.boutonDroit:hover {
+    background-color: #B994E3;
+    transform: scale(1.2);
+    transition: 80ms;
+}
+
+.boutonGauche:hover {
+    background-color: #B994E3;
+    transform: scale(1.2);
+    transition: 80ms;
+}
+
+
 /* *****************************************MEDIA******************************************* */
-@media (max-width: 650px){
+@media (max-width: 700px){
     #icons {
         display: block;
     }
@@ -106,21 +223,68 @@ nav ul li a:hover{
         content: "\2630";
         font-size: calc(1rem + 3vw);
     }
+    #iconsClose:before{
+        color: white;
+        content: "\2715";
+        font-size: calc(1rem + 3vw);
+    }
+
+    #iconsClose {
+        display: none;
+    }
+
     nav ul{
-        position: fixed;
-        left: -100%;
-        top: 7%;
-        flex-direction: column;
         text-align: center;
         background:  #8EBBED;
-        transition: 0.5s;
         width: 100%;
+        padding-bottom: 2%;
+        flex-direction: column;
     }
     nav li {
         padding: 3px 0;
     }
-
     nav.active ul {
         left: 0%;
+    }
+    .mobile{
+        position: absolute;
+        left: -100%;
+        top: 80px;
+        transition: 0.5s;
+        width: 100%;
+        flex-direction: column;
+        z-index: 3;
+    }
+
+    .mobile.active {
+        left: 0%;
+    }
+
+    .button_add {
+        align-items: center;
+        background-color: #8EBBED;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.5s;
+        padding-bottom: 2%;
+    }
+    .button_add.active {
+        left: 0%
+    }
+    .button_add a{
+        display: flex;
+        width: 40%;
+        height: 35px;
+        margin-top: 1%;
+    }
+    .figure_user img{
+        margin-left: 5%;
+        width: 50%;
+        height: 50%;
+    }
+
+    .figure_user{
+        width: 20%;
+        font-size: calc(0.5rem + 1vw);
     }
 }
