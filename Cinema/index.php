@@ -4,6 +4,7 @@ require("controller/FilmController.php");
 require("controller/ActeurController.php");
 require("controller/GenreController.php");
 require("controller/RealisateurController.php");
+require("app/DAO.php");
 
 $h1 = new HomeController();
 $f1 = new FilmController();
