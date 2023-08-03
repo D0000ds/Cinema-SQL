@@ -391,7 +391,62 @@ h2 {
     height: 30px;
     text-transform: capitalize;
 }
+#title{
+    background-color: #AD9EEA;
+    color: white;
+    border: 0 solid;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 3px;
+    width: 100%;
+    height: 30px;
+    text-transform: capitalize;
+}
 #surname{
+    background-color: #AD9EEA;
+    color: white;
+    border: 0 solid;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 3px;
+    width: 100%;
+    height: 30px;
+    margin-top: 2%;
+    text-transform: capitalize;
+}
+#release{
+    background-color: #AD9EEA;
+    color: white;
+    border: 0 solid;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 3px;
+    width: 100%;
+    height: 30px;
+    margin-top: 2%;
+    text-transform: capitalize;
+}
+#duration{
+    background-color: #AD9EEA;
+    color: white;
+    border: 0 solid;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 3px;
+    width: 100%;
+    height: 30px;
+    margin-top: 2%;
+    text-transform: capitalize;
+}
+#synonpsis{
+    background-color: #AD9EEA;
+    color: white;
+    border: 0 solid;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 3px;
+    width: 100%;
+    height: 80px;
+    margin-top: 2%;
+    text-transform: capitalize;
+}
+
+#note{
     background-color: #AD9EEA;
     color: white;
     border: 0 solid;
@@ -413,7 +468,7 @@ h2 {
     margin-top: 2%;
     text-transform: capitalize;
 }
-#birth{
+#date_naissance{
     background-color: #AD9EEA;
     color: white;
     border: 0 solid;
@@ -423,6 +478,41 @@ h2 {
     width: 48%;
     height: 30px;
     margin-top: 2%;
+}
+#select_genre {
+    background-color: #AD9EEA;
+    color: white;
+    border: 0 solid;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 3px;
+    width: 48%;
+    height: 30px;
+    margin-top: 2%;
+    text-transform: capitalize;
+}
+
+.btnAddFilm {
+    background-color: #AD9EEA;
+    color: white;
+    border: 0 solid;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 3px;
+    width: 48%;
+    height: 30px;
+    margin-top: 2%;
+    margin-left: 3%;
+    text-transform: capitalize;
+}
+#select_realisateur {
+    background-color: #AD9EEA;
+    color: white;
+    border: 0 solid;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 3px;
+    width: 48%;
+    height: 30px;
+    margin-top: 2%;
+    text-transform: capitalize;
 }
 
 #select_role {
@@ -451,11 +541,18 @@ h2 {
     cursor: pointer;
     margin-top: 2%;
     border-radius: 3px;
+    margin-bottom: 3%;
 }
 
 #btn-add-actor-or-rea:hover {
     background-color: #B994E3;
     transform: scale(1.2);
+    transition: 50ms;
+}
+
+.btnAddFilm:hover{
+    background-color: #B994E3;
+    transform: scale(1.05);
     transition: 50ms;
 }
 
@@ -468,6 +565,25 @@ h2 {
 #gender::placeholder {
     color: white;
 }
+#title::placeholder {
+    color: white;
+}
+#release::placeholder {
+    color: white;
+}
+#synonpsis::placeholder {
+    color: white;
+}
+#note::placeholder {
+    color: white;
+}
+#duration::placeholder {
+    color: white;
+}
+.phraseBienJouéAddActeurEtRea{
+    color: green;
+}
+
 /* *****************************************MEDIA******************************************* */
 @media (max-width: 700px){
     #icons {
@@ -602,6 +718,83 @@ h2 {
         font-weight: normal;
         text-shadow: 3px 4px 3px rgba(0, 0, 0, 0.42);
     }
+    #name{
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 70%;
+        height: 30px;
+        text-transform: capitalize;
+        margin-top: 5%;
+    }
+    #surname{
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 70%;
+        height: 30px;
+        margin-top: 5%;
+        text-transform: capitalize;
+    }
+    #gender{
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 70%;
+        height: 30px;
+        text-transform: capitalize;
+        margin-top: 5%;
+    }
+    #date_naissance{
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 70%;
+        height: 30px;
+        margin-top: 5%;
+        margin-left: 0;
+
+    }
+    #picture_personne {
+        margin-top: 5%;
+        width: 70%;
+    }
+
+    #select_role {
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 70%;
+        height: 30px;
+        margin-top: 5%;
+    }
+    
+    
+    #btn-add-actor-or-rea {
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        text-transform: uppercase;
+        width: 70%;
+        height: 30px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer;
+        margin-top: 5%;
+        border-radius: 3px;
+    }
+    .title-add-actor-or-rea {
+        font-size: 15px;
+    }
 }
 
 @media screen and (min-width: 720px)and (max-width: 1080px) {
@@ -645,5 +838,80 @@ h2 {
         margin: 20px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         border-radius: 10px;
+    }
+    #name{
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 80%;
+        height: 30px;
+        text-transform: capitalize;
+        margin-top: 5%;
+    }
+    #surname{
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 80%;
+        height: 30px;
+        margin-top: 5%;
+        text-transform: capitalize;
+    }
+    #gender{
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 80%;
+        height: 30px;
+        text-transform: capitalize;
+        margin-top: 5%;
+    }
+    #date_naissance{
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 80%;
+        height: 30px;
+        margin-top: 5%;
+        margin-left: 0;
+
+    }
+    #picture_personne {
+        margin-top: 5%;
+    }
+
+    #select_role {
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 80%;
+        height: 30px;
+        margin-top: 5%;
+    }
+    
+    #btn-add-actor-or-rea {
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        text-transform: uppercase;
+        width: 80%;
+        height: 30px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer;
+        margin-top: 5%;
+        border-radius: 3px;
+    }
+    .title-add-actor-or-rea {
+        font-size: 15px;
     }
 }

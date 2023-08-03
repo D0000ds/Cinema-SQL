@@ -15,6 +15,8 @@ class FilmController
     }
 
     public function addFilmPage(){
+        $dao = new DAO();
+
         require("view/film/addFilm.php");
     }
 

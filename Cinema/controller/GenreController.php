@@ -13,4 +13,8 @@ class GenreController
 
         require("view/genre/genre.php");
     }
+
+    public function detailGenre(){
+        require("view/genre/detailGenre.php");
+    }
 }
