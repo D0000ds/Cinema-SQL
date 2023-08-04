@@ -14,7 +14,7 @@ class GenreController
         require("view/genre/genre.php");
     }
 
-    public function detailGenre(){
-        require("view/genre/detailGenre.php");
+    public function addGenre(){
+        require("view/genre/addGenre.php");
     }
 }

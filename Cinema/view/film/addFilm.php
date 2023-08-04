@@ -13,24 +13,39 @@ ob_start();
             <input type="text" name="duration" id="duration" placeholder="Duration in minutes"/>
             <input type="text" name="synonpsis" id="synonpsis" placeholder="Synonpsis"/>
             <select name="select_genre" id="select_genre" value="">
-                <option value="">--Please choose an option--</option>
+                <option value="">--Please choose a Gender--</option>
                 <?php
-
+                    while($selectGenre = $selectsGenre->fetch()){
+                        echo'<option value="'.$selectGenre['id_genre'].'">'.$selectGenre['libelle'].'</option>';
+                        
+                    }
 
                 ?>
             </select>
-            <a href="index.php?action=Detail gender"><button class="btnAddFilm">add</button></a>
+            <a href="index.php?action=Add Gender"><span class="btnAddFilm">add</span></a>
             <select name="select_realisateur" id="select_realisateur">
-                <option value="">--Please choose an option--</option>
+                <option value="">--Please choose an producer--</option>
                 <?php
-
+                    while($selectRea = $selectsRea->fetch()){
+                        echo'<option value="'.$selectRea['id_realisateur'].'">'.$selectRea['nom'].' '.$selectRea['prenom'].'</option>';
+                        
+                    }
 
                 ?>
             </select>
-            <a href="Add actor/producer"><button class="btnAddFilm">add</button></a>
-            <input type="number" name="note" id="note" placeholder="Notation">
+            <a href="index.php?action=Add actor/producer"><span class="btnAddFilm">add</span></a>
+            <input type="number" name="note" id="note" max="5" placeholder="Notation (5 max)">
+            <input type="date" name="date_naissance" id="date_naissance"/>
+            <input type="file" name="picture_film" id="picture_film">
             <input type="submit" value="add" id="btn-add-actor-or-rea"/>
         </form>
+        <?php
+            if(isset($_POST['title']) && isset($_POST['release']) && isset($_POST['duration']) && isset($_POST['synonpsis']) && isset($_POST['select_genre']) && isset($_POST['select_realisateur']) && isset($_POST['note']) && isset($_POST['picture_film'])){
+                ?>
+                <span class="phraseBienJouéAddActeurEtRea">Bien joué le film a été ajoutée a la base de donnée</span>
+                <?php
+            } 
+        ?>
 </div>
 
 

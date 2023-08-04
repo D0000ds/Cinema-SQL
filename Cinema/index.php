@@ -35,7 +35,8 @@ if(isset($_GET['action'])) {
         case "Add Casting":
             $f1->addCasting();
             break;
-        case "Detail gender":
+        case "Add Gender":
+            $g1->addGenre();
             break;
         default:
             $h1->HomePage();

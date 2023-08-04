@@ -492,6 +492,7 @@ h2 {
 }
 
 .btnAddFilm {
+    display: inline-block;
     background-color: #AD9EEA;
     color: white;
     border: 0 solid;
@@ -513,6 +514,9 @@ h2 {
     height: 30px;
     margin-top: 2%;
     text-transform: capitalize;
+}
+#picture_film {
+    margin-top: 2%;
 }
 
 #select_role {
@@ -767,6 +771,10 @@ h2 {
         margin-top: 5%;
         width: 70%;
     }
+    #picture_film{
+        margin-top: 5%;
+        width: 70%;
+    }
 
     #select_role {
         background-color: #AD9EEA;
@@ -778,7 +786,94 @@ h2 {
         height: 30px;
         margin-top: 5%;
     }
-    
+    #release{
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 70%;
+        height: 30px;
+        margin-top: 5%;
+        text-transform: capitalize;
+    }
+    #title {
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 70%;
+        height: 30px;
+        margin-top: 5%;
+        text-transform: capitalize;
+    }
+    #duration {
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 70%;
+        height: 30px;
+        margin-top: 5%;
+        text-transform: capitalize;
+    }
+    #synonpsis {
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 70%;
+        height: 60px;
+        margin-top: 5%;
+        text-transform: capitalize;
+    }
+    #select_genre {
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 70%;
+        height: 30px;
+        margin-top: 5%;
+    }
+    #select_realisateur {
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 70%;
+        height: 30px;
+        margin-top: 5%;
+    }
+    #note {
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 70%;
+        height: 30px;
+        margin-top: 5%;
+        text-transform: capitalize
+    }
+    .btnAddFilm {
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        text-transform: uppercase;
+        width: 70%;
+        height: 30px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer;
+        margin-top: 5%;
+        border-radius: 3px;
+        margin-left: 0;
+    }
     
     #btn-add-actor-or-rea {
         background-color: #AD9EEA;
@@ -797,7 +892,7 @@ h2 {
     }
 }
 
-@media screen and (min-width: 720px)and (max-width: 1080px) {
+@media screen and (min-width: 710px)and (max-width: 1080px) {
     .card {
         background-color: white;
         width: 120px;
@@ -887,6 +982,9 @@ h2 {
     #picture_personne {
         margin-top: 5%;
     }
+    #picture_film {
+        margin-top: 5%;
+    }
 
     #select_role {
         background-color: #AD9EEA;
@@ -897,6 +995,96 @@ h2 {
         width: 80%;
         height: 30px;
         margin-top: 5%;
+    }
+    #note {
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 80%;
+        height: 30px;
+        margin-top: 5%;
+        text-transform: capitalize;
+    }
+    #title {
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 80%;
+        height: 30px;
+        margin-top: 5%;
+        text-transform: capitalize;
+    }
+    #release {
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 80%;
+        height: 30px;
+        margin-top: 5%;
+        text-transform: capitalize;
+    }
+    #synonpsis{
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 80%;
+        height: 60px;
+        margin-top: 5%;
+        text-transform: capitalize;
+    }
+    #duration {
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 80%;
+        height: 30px;
+        margin-top: 5%;
+        text-transform: capitalize;
+    }
+    
+    
+    #select_genre {
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 80%;
+        height: 30px;
+        margin-top: 5%;
+    }
+    #select_realisateur {
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 80%;
+        height: 30px;
+        margin-top: 5%;
+    }
+    .btnAddFilm {
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        text-transform: uppercase;
+        width: 80%;
+        height: 30px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer;
+        margin-top: 5%;
+        margin-left: 0;
+        border-radius: 3px;
     }
     
     #btn-add-actor-or-rea {
