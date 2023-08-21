@@ -34,12 +34,11 @@ ob_start();
                 ?>
             </select>
             <a href="index.php?action=Add actor/producer"><span class="btnAddFilm">add</span></a>
-            <input type="number" name="note" id="note" max="5" placeholder="Notation (5 max)">
             <input type="file" name="picture_film" id="picture_film">
             <input type="submit" value="add" id="btn-add-actor-or-rea"/>
         </form>
         <?php
-            if(isset($_POST['title']) && isset($_POST['release']) && isset($_POST['duration']) && isset($_POST['synonpsis']) && isset($_POST['select_genre']) && isset($_POST['select_realisateur']) && isset($_POST['note']) && isset($_POST['picture_film'])){
+            if(isset($_POST['title']) && isset($_POST['release']) && isset($_POST['duration']) && isset($_POST['synonpsis']) && isset($_POST['select_genre']) && isset($_POST['select_realisateur']) && isset($_POST['picture_film'])){
                 ?>
                 <span class="phraseBienJouéAddActeurEtRea">Bien joué le film a été ajoutée a la base de donnée</span>
                 <?php

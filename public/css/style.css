@@ -372,6 +372,96 @@ h2 {
     right: 0;
     left: 0;
 }
+.container-detailFilm{
+    margin-top: 3%;
+    margin-left: 3%;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie-picture {
+    width: 40%;
+    display: grid;
+}
+.movie-picture img{
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.info-film{
+    display: flex;
+    width: 40%;
+    flex-wrap: wrap;
+    margin-left: -10%;
+}
+.title-movie {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    text-transform: capitalize;
+}
+.title-movie span {
+    width: 100%;
+}
+.title-movie a {
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.casting-info{
+    background-color: #8EBBED;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-top: 3%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    font-size: calc(1rem + 1vw);
+    text-transform: capitalize;
+}
+
+.title-span1{
+    font-size: calc(1rem + 1vw);
+}
+.title-span2{
+    font-size: calc(0.5rem + 0.5vw);
+}
+
+.movie-picture a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: #A2A6EE;
+    color: white;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 3%;
+    border-radius: 5px;
+    height: 30px;
+    width: 70%;
+    font-size: calc(0.5rem + 1vw);
+    text-transform: capitalize;
+}
+
+.container-card-movie-casting{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie-picture a:hover{
+    background-color: #B994E3;
+    transform: scale(1.1);
+    transition: 50ms;
+}
+
 .container-form{
     display: flex;
     width: 100%;
@@ -446,17 +536,6 @@ h2 {
     text-transform: capitalize;
 }
 
-#note{
-    background-color: #AD9EEA;
-    color: white;
-    border: 0 solid;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 3px;
-    width: 100%;
-    height: 30px;
-    margin-top: 2%;
-    text-transform: capitalize;
-}
 #gender{
     background-color: #AD9EEA;
     color: white;
@@ -589,9 +668,7 @@ h2 {
 #synonpsis::placeholder {
     color: white;
 }
-#note::placeholder {
-    color: white;
-}
+
 #duration::placeholder {
     color: white;
 }
@@ -861,17 +938,6 @@ h2 {
         height: 30px;
         margin-top: 5%;
     }
-    #note {
-        background-color: #AD9EEA;
-        color: white;
-        border: 0 solid;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        border-radius: 3px;
-        width: 70%;
-        height: 30px;
-        margin-top: 5%;
-        text-transform: capitalize
-    }
     .btnAddFilm {
         background-color: #AD9EEA;
         color: white;
@@ -1006,17 +1072,6 @@ h2 {
         width: 80%;
         height: 30px;
         margin-top: 5%;
-    }
-    #note {
-        background-color: #AD9EEA;
-        color: white;
-        border: 0 solid;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        border-radius: 3px;
-        width: 80%;
-        height: 30px;
-        margin-top: 5%;
-        text-transform: capitalize;
     }
     #title {
         background-color: #AD9EEA;

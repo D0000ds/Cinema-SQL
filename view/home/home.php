@@ -22,7 +22,7 @@ ob_start();
         <?php
         while ($lastestFilm = $lastestFilms->fetch()) { ?>
             <div class="card">
-                <a href="index.php?action=Films?id=<?= $lastestFilm["id_film"]; ?>">
+                <a href="index.php?action=Detail Film&id=<?= $lastestFilm["id_film"]; ?>">
                     <img class="imgLastest"src="<?= $lastestFilm["picture"]; ?>" alt="movie picture">
                     <span><?= $lastestFilm["titre"]; ?><br></span>
                     <span><?= $lastestFilm["duree"]; ?>h<br></span>

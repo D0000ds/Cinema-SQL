@@ -3,7 +3,17 @@ ob_start();
 ?>
 
 <div>
-    <span>add casting</span>
+    <h3 class="title-add-actor-or-rea">add casting</h3>
+    <form action="" method="post">
+        <select name="" id="" value="">
+            <option value="">--Please choose a Actor--</option>
+        </select>
+        <select name="" id="" value="">
+            <option value="">--Please choose a Role--</option>
+        </select>
+        <a href=""><span>add</span></a>
+        <input type="submit" value="add" id=""/>
+    </form>
 </div>
 
 <?php

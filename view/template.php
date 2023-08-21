@@ -31,7 +31,6 @@
                     </ul>
                     <div class="button_add" id="button_id">
                         <a href="index.php?action=Add actor/producer">Add actor/producer</a>
-                        <a href="index.php?action=Add Casting">Add casting</a>
                         <a href="index.php?action=Add film">Add film</a>
                     </div>
                 </div>
