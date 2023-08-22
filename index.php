@@ -20,6 +20,21 @@ if(isset($_GET['action'])) {
         case "Detail Film":
             $f1->detailFilm($_GET['id']);
             break;
+        case "Detail Acteur":
+            $a1->detailActeur($_GET['id']);
+            break;
+        case "Detail Realisateur":
+            $r1->detailRea($_GET['id']);
+            break;
+        case "Detail Genre":
+            $g1->detailGenre($_GET['id']);
+            break;
+        case "Modify Film":
+            $f1->modifyFilm($_GET['id']);
+            break;
+        case "Modify ActorOrProducer":
+            $r1->modifyReaOrActor($_GET['id']);
+            break;
         case "Acteurs":
             $a1->listActeur();
             break;

@@ -10,7 +10,7 @@ ob_start();
         <form action="" method="post">
             <input type="text" name="title" id="title" placeholder="Title"/>
             <input type="date" name="release" id="release"/>
-            <input type="number" name="duration" id="duration" step=".1" placeholder="Duration in minutes"/>
+            <input type="number" name="duration" id="duration" placeholder="Duration in minutes"/>
             <input type="text" name="synonpsis" id="synonpsis" placeholder="Synonpsis"/>
             <select name="select_genre" id="select_genre" value="">
                 <option value="">--Please choose a Gender--</option>

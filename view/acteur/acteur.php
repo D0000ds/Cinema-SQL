@@ -18,7 +18,7 @@ ob_start();
         <?php
         while ($acteur = $acteursList->fetch()) { ?>
             <div class="card_acteur">
-                <a href="index.php?action=Acteurs?id=<?= $acteur["id_acteur"]; ?>">
+                <a href="index.php?action=Detail Acteur&id=<?= $acteur["id_acteur"]; ?>">
                     <img class="imgLastest"src="<?= $acteur["picture"]; ?>" alt="acteur picture">
                     <span><?= $acteur["nom"] ?> <?= $acteur["prenom"] ?></span>
                 </a>

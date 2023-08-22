@@ -18,7 +18,7 @@ ob_start();
         <?php
         while ($realisateur = $realisateursList->fetch()) { ?>
             <div class="card-rea">
-                <a href="index.php?action=Realisateurs?id=<?= $realisateur["id_realisateur"]; ?>">
+                <a href="index.php?action=Detail Realisateur&id=<?= $realisateur["id_realisateur"]; ?>">
                     <img class="imgLastest"src="<?= $realisateur["picture"]; ?>" alt="movie picture">
                     <span><?= $realisateur["nom"];?> <?= $realisateur["prenom"]; ?></span>
                 </a>

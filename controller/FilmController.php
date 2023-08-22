@@ -72,9 +72,21 @@ class FilmController
         AND c.id_acteur = a.id_acteur
         AND c.id_role = r.id_role
         AND p.id_personne = a.id_personne;";
+
+        $sql3="SELECT g.id_genre, libelle, f.id_film
+        FROM genre g, genre_film gf, film f
+        WHERE g.id_genre = gf.id_genre
+        AND f.id_film = gf.id_film;";
         
-        $sql2 = $dao->executeRequest($sql2);
-        $sql = $dao->executeRequest($sql);
+        $sqls2 = $dao->executeRequest($sql2);
+        $sqls = $dao->executeRequest($sql);
+        $sqls3 = $dao->executeRequest($sql3);
         require("view/film/filmDetail.php");
+    }
+
+    public function modifyFilm($id){
+        $dao = new DAO();
+
+        require("view/film/modifyFilm.php");
     }
 }

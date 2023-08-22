@@ -65,4 +65,26 @@ class ActeurController
         }
         require("view/acteur/addActorOrRealisateur.php");
     }
+
+    public function detailActeur($id){
+        $dao = new DAO();
+
+        $sql = "SELECT nom, prenom, DATE_FORMAT(date_naissance, '%d %M %Y') date_naissance, sexe, a.picture, a.id_acteur, COUNT(c.id_film) nbFilm
+        FROM personne p, acteur a, film f, casting c
+        WHERE p.id_personne = a.id_personne
+        AND f.id_film = c.id_film
+        AND a.id_acteur = c.id_acteur
+        GROUP BY a.id_acteur;";
+
+        $sql2 = "SELECT titre, f.picture, f.id_film, a.id_acteur,TIME_FORMAT(SEC_TO_TIME(duree*60),'%H:%i') duree, ROUND(note, 1) AS note_1
+        FROM film f, casting c , acteur a, role r
+        WHERE c.id_acteur = a.id_acteur
+        AND c.id_film = f.id_film
+        AND c.id_role = r.id_role;";
+
+        $infoActors = $dao->executeRequest($sql);
+        $listFilms = $dao->executeRequest($sql2);
+
+        require("view/acteur/detailActeur.php");
+    }
 }

@@ -18,7 +18,7 @@ ob_start();
         <?php
         while ($genre = $allGenres->fetch()) { ?>
             <div class="GenresCard">
-                <a href="index.php?action=Genres?id=<?= $genre["id_genre"]; ?>">
+                <a href="index.php?action=Detail Genre&id=<?= $genre["id_genre"]; ?>">
                     <img class="imgLastest"src="<?= $genre["picture"]; ?>" alt="genre picture">
                     <span><?= $genre["libelle"]; ?></span>
                 </a>

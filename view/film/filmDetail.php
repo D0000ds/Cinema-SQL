@@ -4,7 +4,7 @@ ob_start();
 
 <div class="container-detailFilm">
 <?php
-while($detail = $sql->fetch()){
+while($detail = $sqls->fetch()){
     if($_GET['id'] == $detail['id_film']){ ?>
     <figure class="movie-picture">
         <img src="<?= $detail["picture"]; ?>" alt="<?= $detail["titre"]; ?>">
@@ -25,16 +25,26 @@ while($detail = $sql->fetch()){
         </div>
         <div class="title-movie">
             <span class="title-span1">producer</span>
-            <a href="index.php?action=Detail Realisateur&id=<?= $detail["id_realisateur"]; ?>"><?= $detail["nom"]; ?> <?= $detail["prenom"]; ?></a>
+            <a class="title-span2" href="index.php?action=Detail Realisateur&id=<?= $detail["id_realisateur"]; ?>"><?= $detail["nom"]; ?> <?= $detail["prenom"]; ?></a>
+        </div>
+        <div class="title-movie">
+            <span class="title-span1">Genre</span>
+            <?php
+            while($listgenre = $sqls3->fetch()){
+                if($_GET['id'] == $listgenre['id_film']){?>
+                    <a class="title-span2" href="index.php?action=Detail Genre&id=<?= $listgenre["id_genre"]; ?>"><?= $listgenre["libelle"]; ?></a>
+                <?php 
+                }
+            }?>
         </div>
         <div class="title-movie">
             <span class="title-span1">synopsis</span>
             <span class="title-span2"><?= $detail["synopsis"]; ?></span>
         </div>
-        <figure>
+        <figure class="figNote">
             <span class="title-span1">note</span>
-            <span><?= $detail["note"]; ?></span>
-            <img src="./public/img/star.png" alt="star">
+            <span class="title-span2"> <?php if($detail["note"] == NULL){echo"This film has no rating yet";}else{ echo $detail["note"];} ?></span>
+            <img src="./public/img/star.png" alt="star" style="display:<?php if($detail["note"] == NULL){echo"none";} ?>;">
         </figure>
     </div>
 <?php 
@@ -46,7 +56,7 @@ while($detail = $sql->fetch()){
             <span>casting</span>
         </div>
 <?php 
-while($detailCasting = $sql2->fetch()){
+while($detailCasting = $sqls2->fetch()){
     if($_GET['id'] == $detailCasting['id_film']){?>
         <div class="card_acteur">
             <a href="index.php?action=Detail Acteur&id=<?= $detailCasting["id_acteur"]; ?>">

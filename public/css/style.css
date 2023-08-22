@@ -402,9 +402,7 @@ h2 {
     width: 100%;
     text-transform: capitalize;
 }
-.title-movie span {
-    width: 100%;
-}
+
 .title-movie a {
     width: 100%;
     text-decoration: none;
@@ -428,9 +426,11 @@ h2 {
 
 .title-span1{
     font-size: calc(1rem + 1vw);
+    width: 100%;
 }
 .title-span2{
     font-size: calc(0.5rem + 0.5vw);
+    margin-right: 5px;
 }
 
 .movie-picture a {
@@ -447,6 +447,14 @@ h2 {
     width: 70%;
     font-size: calc(0.5rem + 1vw);
     text-transform: capitalize;
+}
+
+.figNote{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    text-transform: capitalize;
+    align-items: center;
 }
 
 .container-card-movie-casting{
@@ -524,6 +532,94 @@ h2 {
     margin-top: 2%;
     text-transform: capitalize;
 }
+
+.input{
+    background-color: #AD9EEA;
+    color: white;
+    border: 0 solid;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 3px;
+    width: 100%;
+    height: 30px;
+    margin-top: 2%;
+    text-transform: capitalize;
+}
+.input_select{
+    background-color: #AD9EEA;
+    color: white;
+    border: 0 solid;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 3px;
+    width: 48%;
+    height: 30px;
+    margin-top: 2%;
+    text-transform: capitalize;
+}
+#chooseActor {
+    background-color: #AD9EEA;
+    color: white;
+    border: 0 solid;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 3px;
+    width: 100%;
+    height: 30px;
+    margin-top: 2%;
+    text-transform: capitalize;
+}
+
+#addCastingButton{
+    background-color: #AD9EEA;
+    color: white;
+    border: 0 solid;
+    text-transform: uppercase;
+    width: 100%;
+    height: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    margin-top: 2%;
+    border-radius: 3px;
+    margin-bottom: 3%;
+}
+
+#modifyAdd{
+    background-color: #AD9EEA;
+    color: white;
+    border: 0 solid;
+    text-transform: uppercase;
+    width: 100%;
+    height: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    margin-top: 2%;
+    border-radius: 3px;
+    margin-bottom: 1%;
+}
+
+#modifyRemove{
+    background-color: #e4717a;
+    color: white;
+    border: 0 solid;
+    text-transform: uppercase;
+    width: 100%;
+    height: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-bottom: 3%;
+}
+
+#synopsisModify{
+    background-color: #AD9EEA;
+    color: white;
+    border: 0 solid;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 3px;
+    width: 100%;
+    height: 80px;
+    margin-top: 2%;
+    text-transform: capitalize;
+}
+
 #synonpsis{
     background-color: #AD9EEA;
     color: white;
@@ -638,9 +734,25 @@ h2 {
 
 }
 
+#modifyRemove:hover {
+    background-color: #ea3c53;
+    transform: scale(1.1);
+    transition: 50ms;
+}
+
 #btn-add-actor-or-rea:hover {
     background-color: #B994E3;
-    transform: scale(1.2);
+    transform: scale(1.1);
+    transition: 50ms;
+}
+#addCastingButton:hover {
+    background-color: #B994E3;
+    transform: scale(1.1);
+    transition: 50ms;
+}
+#modifyAdd:hover {
+    background-color: #B994E3;
+    transform: scale(1.1);
     transition: 50ms;
 }
 
@@ -648,6 +760,19 @@ h2 {
     background-color: #B994E3;
     transform: scale(1.05);
     transition: 50ms;
+}
+.title-genre{
+    margin-top: 1%;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: calc(1rem + 1vw);
+}
+.genre-card{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 #name::placeholder {
@@ -967,6 +1092,116 @@ h2 {
     .title-add-actor-or-rea {
         font-size: 15px;
     }
+    .movie-picture{
+        width: 100%;
+    }
+    .movie-picture img{
+        width: 100%;
+    }
+    .movie-picture a{
+        width: 100%;
+        font-size: 20px;
+    }
+    .info-film {
+        width: 100%;
+        margin-left: 0;
+    }
+    .title-span1 {
+        text-align: center;
+        font-size: 20px;
+    }
+    .title-span2 {
+        text-align: center;
+        font-size: 15px;
+    }
+    .figNote{
+        justify-content: center;
+    }
+    .title-movie{
+        justify-content: center;
+    }
+    .input{
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 70%;
+        height: 30px;
+        margin-top: 5%;
+        text-transform: capitalize;
+    }
+    #synopsisModify{
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 70%;
+        height: 60px;
+        margin-top: 5%;
+        text-transform: capitalize;
+    }
+    .input_select{
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 70%;
+        height: 30px;
+        margin-top: 5%;
+    }
+    #modifyAdd{
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        text-transform: uppercase;
+        width: 70%;
+        height: 30px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer;
+        margin-top: 5%;
+        border-radius: 3px;
+        margin-left: 0;
+    }
+    #modifyRemove{
+        background-color: #e4717a;
+        color: white;
+        border: 0 solid;
+        text-transform: uppercase;
+        width: 70%;
+        height: 30px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer;
+        margin-top: 5%;
+        border-radius: 3px;
+        margin-left: 0;
+    }
+    #chooseActor{
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 70%;
+        height: 30px;
+        margin-top: 5%;
+        text-transform: capitalize;
+    }
+    #addCastingButton{
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        text-transform: uppercase;
+        width: 70%;
+        height: 30px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer;
+        margin-top: 5%;
+        border-radius: 3px;
+        margin-left: 0;
+    }
 }
 
 @media screen and (min-width: 710px)and (max-width: 1080px) {
@@ -1167,5 +1402,86 @@ h2 {
     }
     .title-add-actor-or-rea {
         font-size: 15px;
+    }
+    .input{
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 80%;
+        height: 30px;
+        margin-top: 5%;
+        text-transform: capitalize;
+    }
+    #synopsisModify{
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 80%;
+        height: 60px;
+        margin-top: 5%;
+        text-transform: capitalize;
+    }
+    .input_select{
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 80%;
+        height: 30px;
+        margin-top: 5%;
+    }
+    #modifyAdd{
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        text-transform: uppercase;
+        width: 80%;
+        height: 30px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer;
+        margin-top: 5%;
+        margin-left: 0;
+        border-radius: 3px;
+    }
+    #modifyRemove{
+        background-color: #e4717a;
+        color: white;
+        border: 0 solid;
+        text-transform: uppercase;
+        width: 80%;
+        height: 30px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer;
+        margin-left: 0;
+        border-radius: 3px;
+    }
+    #chooseActor{
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3px;
+        width: 80%;
+        height: 30px;
+        margin-top: 5%;
+        text-transform: capitalize;
+    }
+    #addCastingButton{
+        background-color: #AD9EEA;
+        color: white;
+        border: 0 solid;
+        text-transform: uppercase;
+        width: 80%;
+        height: 30px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer;
+        margin-top: 5%;
+        margin-left: 0;
+        border-radius: 3px;
     }
 }
