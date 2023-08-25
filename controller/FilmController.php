@@ -54,10 +54,6 @@ class FilmController
         require("view/film/addFilm.php");
     }
 
-    public function addCasting(){
-        require("view/film/addCasting.php");
-    }
-
     public function detailFilm($id){
         $dao = new DAO();
 
@@ -86,6 +82,31 @@ class FilmController
 
     public function modifyFilm($id){
         $dao = new DAO();
+
+        $sql = "SELECT f.id_film, titre, f.picture, DATE_FORMAT(annee_sortie_fr, '%d/%m/%Y') annee_sortie_fr,duree,synopsis,nom,prenom, f.id_realisateur, note, libelle, g.id_genre
+        FROM film f, personne p, realisateur r, genre g ,genre_film gf
+        WHERE p.id_personne = r.id_personne
+        AND f.id_realisateur = r.id_realisateur
+        AND g.id_genre = gf.id_genre
+        AND f.id_film = gf.id_film;";
+
+        $sql2 = "SELECT libelle, id_genre
+        FROM genre 
+        ORDER BY libelle ASC;";
+
+        $sql3 = "SELECT nom, prenom, id_realisateur
+        FROM personne p, realisateur r
+        WHERE p.id_personne = r.id_personne
+        ORDER BY nom ASC;";
+
+        $infoFilms = $dao->executeRequest($sql);
+        $modifyGenres = $dao->executeRequest($sql2);
+        $modifyReas = $dao->executeRequest($sql3);
+
+        if(isset($_POST['titleModify'])){
+            $sqlUpdate = "";
+        }
+
 
         require("view/film/modifyFilm.php");
     }
