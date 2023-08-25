@@ -779,6 +779,11 @@ h2 {
     transform: scale(1.05);
     transition: 50ms;
 }
+
+#sexeModifyActor{
+    margin-right: 3%;
+}
+
 .title-genre{
     margin-top: 1%;
     text-align: center;
@@ -798,6 +803,10 @@ h2 {
 }
 #synopsisModify::placeholder {
     color:white;
+}
+
+#sexeModifyActor::placeholder{
+    color: white;
 }
 
 #name::placeholder {
@@ -1012,6 +1021,9 @@ h2 {
     #picture_film{
         margin-top: 5%;
         width: 70%;
+    }
+    #sexeModifyActor{
+        margin-right: 0;
     }
 
     #select_role {
@@ -1283,6 +1295,9 @@ h2 {
         margin: 20px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         border-radius: 10px;
+    }
+    #sexeModifyActor{
+        margin-right: 0;
     }
     #name{
         background-color: #AD9EEA;

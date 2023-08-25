@@ -7,7 +7,7 @@ while($detailRea = $infoReas->fetch()){
     if($_GET['id'] == $detailRea['id_realisateur']){ ?>
         <figure class="movie-picture">
             <img src="<?= $detailRea["picture"]; ?>" alt="<?= $detailRea["nom"]; ?> <?= $detailRea["prenom"]; ?>">
-            <a href="index.php?action=Modify ActorOrProducer&id=<?= $detailRea["id_realisateur"]; ?>">modify</a>
+            <a href="index.php?action=Modify ActorOrProducer&id=<?= $detailRea["id_personne"]; ?>">modify</a>
         </figure>
         <div class="info-film">
             <div class="title-movie">

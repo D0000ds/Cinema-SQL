@@ -99,15 +99,69 @@ class FilmController
         WHERE p.id_personne = r.id_personne
         ORDER BY nom ASC;";
 
+        $sql4 = "SELECT nom, prenom, id_acteur
+        FROM personne p,acteur a
+        WHERE p.id_personne = a.id_personne
+        ORDER BY nom ASC;";
+
+        $sql5 = "SELECT libelle, id_role
+        FROM role r";
+
         $infoFilms = $dao->executeRequest($sql);
         $modifyGenres = $dao->executeRequest($sql2);
         $modifyReas = $dao->executeRequest($sql3);
-
-        if(isset($_POST['titleModify'])){
-            $sqlUpdate = "";
+        $modifylistsActor = $dao->executeRequest($sql4);
+        $modifyListsRoles = $dao->executeRequest($sql5);
+        
+        if(isset($_POST['modify'])){
+            switch($_POST['modify']){
+                case "modify":
+                    if(isset($_POST['titleModify']) && isset($_POST['dateModify']) && isset($_POST['durationModify']) && isset($_POST['noteModify']) && isset($_POST['synopsisModify']) && isset($_POST['genreModify']) && isset($_POST['producerModify']) && isset($_POST['picture_film'])){
+                        $sqlUpdate = "UPDATE film
+                        SET titre= '".$_POST['titleModify']."', annee_sortie_fr = '".$_POST['dateModify']."', duree = '".$_POST['durationModify']."', synopsis = '".$_POST['synopsisModify']."', note = '".$_POST['noteModify']."', id_realisateur=".$_POST['producerModify'].", picture = 'public/img/".$_POST['picture_film']."'
+                        WHERE id_film = ".$id.";";
+                
+                        $sqlUpdateGenre = "UPDATE genre_film
+                        SET id_genre = ".$_POST['genreModify']."
+                        WHERE id_film =".$id;
+                
+                        $dao->executeRequest($sqlUpdate);
+                        $dao->executeRequest($sqlUpdateGenre);
+                    }
+                    break;
+                    
+                case "remove":
+                    $sqlDeleteGenre = "DELETE FROM genre_film
+                    WHERE id_film = ".$id.";";
+                    $sqlDelete = "DELETE FROM film
+                    WHERE id_film = ".$id.";";
+        
+        
+                    $dao->executeRequest($sqlDeleteGenre);
+                    $dao->executeRequest($sqlDelete);
+                    break;
+            }
         }
 
+        if(isset($_POST['castingAddButton'])){
+            switch($_POST['castingAddButton']){
+                case "add":
+                    if(isset($_POST['chooseRole']) && isset($_POST['chooseActor'])){
+                       $sqlCasting = "INSERT INTO casting VALUES(".$id.", ".$_POST['chooseActor'].", ".$_POST['chooseRole'].");";
 
-        require("view/film/modifyFilm.php");
+                       $dao->executeRequest($sqlCasting);
+                    }
+                    break;
+                case "remove":
+                    $sqlCastingRemove = "DELETE FROM casting
+                    WHERE id_film = ".$id."
+                    AND id_acteur = '".$_POST['chooseActor']."'
+                    AND id_role = '".$_POST['chooseRole']."';";
+
+                    $dao->executeRequest($sqlCastingRemove);
+                    break;
+            }   
+        }
+    require("view/film/modifyFilm.php");
     }
 }

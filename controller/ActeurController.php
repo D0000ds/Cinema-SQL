@@ -69,7 +69,7 @@ class ActeurController
     public function detailActeur($id){
         $dao = new DAO();
 
-        $sql = "SELECT nom, prenom, DATE_FORMAT(date_naissance, '%d %M %Y') date_naissance, sexe, a.picture, a.id_acteur, COUNT(c.id_film) nbFilm
+        $sql = "SELECT nom, prenom, DATE_FORMAT(date_naissance, '%d %M %Y') date_naissance, sexe, a.picture, a.id_acteur, COUNT(c.id_film) nbFilm, p.id_personne
         FROM personne p, acteur a, film f, casting c
         WHERE p.id_personne = a.id_personne
         AND f.id_film = c.id_film
